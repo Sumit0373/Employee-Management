@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Management</title>
+  <link rel="stylesheet" href="employee.css" />
 </head>
 <body>
-    <h1>employee</h1>
+
+  <div class="container">
+    <h1>Employee Management System</h1>
+
+    <form id="employeeForm">
+      <input type="text" id="name" placeholder="Employee Name" required />
+      <input type="text" id="position" placeholder="Position" required />
+      <button type="submit">Add Employee</button>
+    </form>
+
+    <h2>Employee List</h2>
+    <ul id="employeeList"></ul>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
