@@ -1,0 +1,92 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2563eb; /* blue-600 */
+}
+
+.nav-links a {
+  margin-left: 16px;
+  color: #374151;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: large;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  padding: 16px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: white;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  padding: 16px;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05);
+  margin-top: 54px;
+  font-size: large;
+}
