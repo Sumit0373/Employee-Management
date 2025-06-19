@@ -10,7 +10,9 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   const matchedUser = users.find(user => user.userId === userId && user.password === password);
 
   if (matchedUser) {
-    window.location.href = 'employee.html'; // redirect to employee page
+    const userName = matchedUser ? matchedUser.name : null;
+    window.location.href = `employee.html?userName=${encodeURIComponent(userName)}`; // redirect to employee page
+
   } else {
     alert('Wrong user ID or password.');
   }
