@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Employee</title>
+  <link rel="stylesheet" href="addEmployeeDetail.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Edit Employee</h2>
+    <form id="editEmployeeForm">
+        <label for="empName">Name of Employee</label>
+        <input type="text" id="empName" name="empName" required />
+
+        <label for="empAge">Age of Employee</label>
+        <input type="number" id="empAge" name="empAge" required />
+
+        <label for="empExp">Experience (in years)</label>
+        <input type="number" id="empExp" name="empExp" required />
+
+      <button type="submit" class="btn">Update</button>
+    </form>
+  </div>
+
+  <script src="editEmployeeDetail.js"></script>
+</body>
+</html>
