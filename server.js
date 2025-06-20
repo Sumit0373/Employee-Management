@@ -7,7 +7,7 @@ const port = 4000;
 app.use(cors());
 app.use(express.json());
 
-// MySQL Connection
+
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -20,11 +20,11 @@ connection.connect((err) => {
     console.error('DB connection error:', err);
     return;
   }
-  console.log('✅ Connected to MySQL');
+  console.log(' Connected to MySQL');
 });
 
 
-// 📄 GET all employees
+
 app.get('/api/employees', (req, res) => {
   connection.query('SELECT * FROM employee_details', (err, results) => {
     if (err) {
@@ -36,7 +36,7 @@ app.get('/api/employees', (req, res) => {
 });
 
 
-// 📄 GET one employee by ID
+
 app.get('/api/employees/:id', (req, res) => {
   const id = req.params.id;
   connection.query('SELECT * FROM employee_details WHERE id = ?', [id], (err, results) => {
@@ -52,7 +52,6 @@ app.get('/api/employees/:id', (req, res) => {
 });
 
 
-// ➕ POST (Add) a new employee
 app.post('/add/employees', (req, res) => {
   const { name, age, experience } = req.body;
 
@@ -71,7 +70,7 @@ app.post('/add/employees', (req, res) => {
 });
 
 
-// 📝 PUT (Update) employee by ID
+
 app.put('/api/employees/:id', (req, res) => {
   const id = req.params.id;
   const { name, age, experience } = req.body;
@@ -91,7 +90,6 @@ app.put('/api/employees/:id', (req, res) => {
 });
 
 
-// ❌ DELETE employee by ID
 app.delete('/api/employees/:id', (req, res) => {
   const id = req.params.id;
   connection.query('DELETE FROM employee_details WHERE id = ?', [id], (err, result) => {
@@ -104,7 +102,7 @@ app.delete('/api/employees/:id', (req, res) => {
 });
 
 
-// ✅ Start server
+
 app.listen(port, () => {
-  console.log(`🚀 Server listening on http://localhost:${port}`);
+  console.log(` Server listening on http://localhost:${port}`);
 });
