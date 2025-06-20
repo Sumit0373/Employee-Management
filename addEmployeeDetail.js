@@ -17,7 +17,7 @@ document.getElementById('employeeForm').addEventListener('submit', function(e) {
     window.location.href = 'employee.html';
   })
   .catch(err => {
-    alert('Error adding employee');
+    alert('Error adding employee'); 
     console.error(err);
   });
 });

@@ -11,7 +11,7 @@ body {
   color: #1f2937;
 }
 
-/* Navbar styles */
+
 .navbar {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -44,7 +44,7 @@ body {
   color: #2563eb;
 }
 
-/* Hero section */
+
 .hero {
   position: relative;
   width: 100%;
@@ -79,7 +79,7 @@ body {
   font-size: 20px;
 }
 
-/* Footer */
+
 .footer {
   background-color: white;
   text-align: center;

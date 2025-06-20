@@ -6,7 +6,7 @@ if (!employeeId) {
   window.location.href = 'employee.html';
 }
 
-// Fetch current employee data
+
 fetch(`http://localhost:4000/api/employees/${employeeId}`)
   .then(res => res.json())
   .then(emp => {
@@ -20,7 +20,7 @@ fetch(`http://localhost:4000/api/employees/${employeeId}`)
     window.location.href = 'employee.html';
   });
 
-// Submit update
+
 document.getElementById('editEmployeeForm').addEventListener('submit', function(e) {
   e.preventDefault();
 

@@ -2,17 +2,17 @@ const params = new URLSearchParams(window.location.search);
 const userName = params.get('userName');
 document.getElementById('welcomeMessage').textContent = `Welcome, ${userName}`;
 
-// Logout
+
 document.getElementById('logoutBtn').addEventListener('click', () => {
   window.location.replace('index.html');
 });
 
-// Redirect to add employee form
+
 document.getElementById('addEmployeeBtn').addEventListener('click', () => {
   window.location.href = 'addEmployeeDetail.html';
 });
 
-// Fetch and display employee data
+
 fetch('http://localhost:4000/api/employees')
   .then(response => response.json())
   .then(data => {
@@ -34,7 +34,7 @@ fetch('http://localhost:4000/api/employees')
     <hr />
   `;
 
-  // Delete button click
+ 
   empDiv.querySelector('.delete-btn').addEventListener('click', function() {
     const id = this.getAttribute('data-id');
     if (confirm('Are you sure you want to delete this employee?')) {
@@ -44,7 +44,7 @@ fetch('http://localhost:4000/api/employees')
       .then(res => res.json())
       .then(data => {
         alert('Employee deleted!');
-        location.reload(); // refresh to show updated list
+        location.reload(); 
       })
       .catch(err => {
         console.error('Error deleting employee:', err);
@@ -53,7 +53,7 @@ fetch('http://localhost:4000/api/employees')
     }
   });
 
-  // Edit button click
+
   empDiv.querySelector('.edit-btn').addEventListener('click', function() {
     const id = this.getAttribute('data-id');
     window.location.href = `editEmployeeDetail.html?id=${id}`;
