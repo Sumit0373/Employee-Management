@@ -41,8 +41,8 @@ employee-management/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/employee-management.git
-cd employee-management
+git clone https://github.com/Sumit0373/Employee-Management.git
+cd Employee-Management
 ```
 
 ### Step 2: Install Dependencies
@@ -104,24 +104,11 @@ You can open `public/index.html` in your browser or use a local server like Live
 | PUT    | /api/employees/\:id | Update employee    |
 | DELETE | /api/employees/\:id | Delete employee    |
 
-## 📸 Screenshots
-
-> Add screenshots inside a `screenshots/` folder and embed like:
-
-```
-![Dashboard View](screenshots/dashboard.png)
-![Add Employee](screenshots/add.png)
-![Edit Employee](screenshots/edit.png)
 ```
 
 ## 🙇‍♂️ Author
 
-**Sumit Singh**
-📧 [your-email@example.com](mailto:your-email@example.com)
-
-## 📜 License
-
-This project is licensed under the MIT License - feel free to use and modify.
+**Sumit Kumar Singh**
 
 ## 🤝 Contributing
 
