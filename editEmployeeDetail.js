@@ -1,5 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const employeeId = params.get('id');
+const userName = params.get('userName');
 
 if (!employeeId) {
   alert('No employee ID provided.');
@@ -36,7 +37,7 @@ document.getElementById('editEmployeeForm').addEventListener('submit', function(
   .then(res => res.json())
   .then(data => {
     alert('Employee updated successfully!');
-    window.location.href = 'employee.html';
+window.location.href = `employee.html?userName=${encodeURIComponent(userName)}`; 
   })
   .catch(err => {
     alert('Error updating employee');

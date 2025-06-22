@@ -56,7 +56,8 @@ fetch('http://localhost:4000/api/employees')
 
   empDiv.querySelector('.edit-btn').addEventListener('click', function() {
     const id = this.getAttribute('data-id');
-    window.location.href = `editEmployeeDetail.html?id=${id}`;
+    window.location.href = `editEmployeeDetail.html?id=${id}&userName=${encodeURIComponent(userName)}`;
+
   });
 
   listContainer.appendChild(empDiv);
