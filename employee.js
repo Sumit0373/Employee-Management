@@ -9,7 +9,7 @@ document.getElementById('logoutBtn').addEventListener('click', () => {
 
 
 document.getElementById('addEmployeeBtn').addEventListener('click', () => {
-  window.location.href = 'addEmployeeDetail.html';
+  window.location.href = `addEmployeeDetail.html?userName=${encodeURIComponent(userName)}`; 
 });
 
 

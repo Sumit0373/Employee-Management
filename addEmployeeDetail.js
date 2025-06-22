@@ -1,3 +1,5 @@
+const params = new URLSearchParams(window.location.search);
+const userName = params.get('userName');
 
 document.getElementById('employeeForm').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -14,7 +16,7 @@ document.getElementById('employeeForm').addEventListener('submit', function(e) {
   .then(res => res.json())
   .then(data => {
     alert('Employee added successfully!');
-    window.location.href = 'employee.html';
+    window.location.href = `employee.html?userName=${encodeURIComponent(userName)}`; 
   })
   .catch(err => {
     alert('Error adding employee'); 
