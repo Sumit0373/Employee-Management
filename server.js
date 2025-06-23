@@ -53,14 +53,14 @@ app.get('/api/employees/:id', (req, res) => {
 
 
 app.post('/add/employees', (req, res) => {
-  const { name, age, experience } = req.body;
+  const { name, age, experience ,email , salary , DA , HRA, PF , NPS , totalSalary} = req.body;
 
-  if (!name || !age || !experience) {
+  if (!name || !age || !experience || !email || !salary || !DA || !HRA || !PF || !NPS || !totalSalary) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
-  const sql = 'INSERT INTO employee_details (name, age, experience) VALUES (?, ?, ?)';
-  connection.query(sql, [name, age, experience], (err, result) => {
+  const sql = 'INSERT INTO employee_details (name, age, experience, email, salary, DA, HRA, PF, NPS, totalSalary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+  connection.query(sql, [name, age, experience , email, salary, DA, HRA, PF , NPS , totalSalary], (err, result) => {
     if (err) {
       console.error('Error inserting employee:', err);
       return res.status(500).json({ error: 'Failed to insert employee' });
@@ -73,14 +73,14 @@ app.post('/add/employees', (req, res) => {
 
 app.put('/api/employees/:id', (req, res) => {
   const id = req.params.id;
-  const { name, age, experience } = req.body;
+  const { name, age, experience,email, salary , DA, HRA, PF, NPS , totalSalary} = req.body;
 
-  if (!name || !age || !experience) {
+  if (!name || !age || !experience || !email || !salary || !DA || !HRA || !PF || !NPS || !totalSalary) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
-  const sql = 'UPDATE employee_details SET name = ?, age = ?, experience = ? WHERE id = ?';
-  connection.query(sql, [name, age, experience, id], (err, result) => {
+  const sql = 'UPDATE employee_details SET name = ?, age = ?, experience = ?, email =? , salary = ? , DA =? , HRA = ? , PF = ? , NPS = ? , totalSalary =?  WHERE id = ?';
+  connection.query(sql, [name, age, experience, email, salary, DA, HRA, PF, NPS , totalSalary, id], (err, result) => {
     if (err) {
       console.error('Error updating employee:', err);
       return res.status(500).json({ error: 'Update failed' });

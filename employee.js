@@ -29,6 +29,13 @@ fetch('http://localhost:4000/api/employees')
     <h3>${emp.name}</h3>
     <p><strong>Age:</strong> ${emp.age}</p>
     <p><strong>Experience:</strong> ${emp.experience} years</p>
+    <p><strong>Email:</strong> ${emp.email} </p>
+    <p><strong>Basic Salary:</strong> ₹${emp.salary} </p>
+    <p><strong>DA(Dearness Allowance ) 20% of Basic Salary:</strong> ₹${emp.DA}</p>
+    <p><strong>HRA(House Rent Allowance) 50% of Basic Salary:</strong> ₹${emp.HRA} </p>
+    <p><strong>PF(Provident Fund) 12% of Basic Salary:</strong> ₹ -${emp.PF} </p>
+    <p><strong>NPS(National Pension System) 10% of Basic Salary:</strong> ₹ -${emp.NPS} </p>
+    <p><strong>Total Salary:</strong> ₹${emp.totalSalary} </p>
     <button class="edit-btn" data-id="${emp.id}">Edit</button>
     <button class="delete-btn" data-id="${emp.id}">Delete</button>
     <hr />
